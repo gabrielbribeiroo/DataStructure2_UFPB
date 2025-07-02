@@ -22,18 +22,18 @@
 #include "tipoStringTAD.h"
 
 int main(void) {
-    tStringTAD umaString, outraString;
+    tStringTAD oneString, anotherString;
 
-    umaString = CriaString("cafe");
-    ExibeString(umaString);
-    printf("comprimento: %d\n", ComprimentoString(umaString));
+    oneString = CriaString("coffee");
+    ExibeString(oneString);
+    printf("length: %d\n", ComprimentoString(oneString));
 
-    outraString = CriaString("Amargo");
-    ExibeString(ConcatenaStrings(umaString, outraString));
-    printf("comprimento: %d\n", ComprimentoString(ConcatenaStrings(umaString, outraString)));
+    anotherString = CriaString("Bitter");
+    ExibeString(ConcatenaStrings(oneString, anotherString));
+    printf("length: %d\n", ComprimentoString(ConcatenaStrings(oneString, anotherString)));
 
-    DestroiString(&umaString);
-    DestroiString(&outraString);
+    DestroiString(&oneString);
+    DestroiString(&anotherString);
     
     return 0;
 }

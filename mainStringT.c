@@ -6,12 +6,12 @@ int main(void) {
     tStringT oneString, anotherString;
 
     // Create a string with "cafe"
-    oneString = CriaString("cafe");
+    oneString = CriaString("coffee");
     ExibeString(oneString); // Display the string
     printf("length: %d\n", ComprimentoString(oneString)); // Print its length
 
-    // Create another string with "Amargo"
-    anotherString = CriaString("Amargo");
+    // Create another string with "Bitter"
+    anotherString = CriaString("Bitter");
     // Concatenate the two strings and display the result
     ExibeString(ConcatenaStrings(oneString, anotherString));
     // Print the length of the concatenated string
