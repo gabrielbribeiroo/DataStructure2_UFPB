@@ -5,10 +5,10 @@ typedef struct movieStruct {
     int id;                 // primary key
     char *title;            // must be allocated
     float averageRating;
-    int voteCount;
-} Movie;
+    int numVotes;
+} tMovie;
 
-extern void PrintMovie(Movie *movie);
-extern void FreeMovie(Movie *movie);
+extern void PrintMovie(tMovie *movie);
+extern void FreeMovie(tMovie *movie);
 
 #endif
