@@ -7,15 +7,15 @@
 
 #define MAX_LINE 5000
 
-typedef int SearchMoveIdx(tTabelaIdx *tab, int key);
-typedef tDado * SearchMoveEnc(tLinkedTable **tab, int key);
+typedef int SearchMoveIdx(tLinkedTable *tab, int key);
+typedef tData * SearchMoveEnc(tLinkedTable **tab, int key);
 
 void RemoveNewline(char *str){
     if (str[strlen(str) - 1] == '\n')
         str[strlen(str) - 1] = '\0';
 }
 
-int LoadFile(const char *filename, tTabelaIdx *tabIdx, tLinkedTable **tabEnc){
+int LoadFile(const char *filename, tLinkedTable *tabIdx, tLinkedTable **tabEnc){
     FILE *fp;
     char line[MAX_LINE+1], *id, *title, *rating, *votes, *comma, *quote;
     int count;
@@ -71,33 +71,31 @@ int LoadFile(const char *filename, tTabelaIdx *tabIdx, tLinkedTable **tabEnc){
 }
 
 int main(void){
-    tTabelaIdx *tabIdx;
+    tLinkedTable *idxTab;
     tLinkedTable *linkTab;
     int q, id;
     clock_t start, end;
     double cpuTime;
 
-    tabIdx = CreateTableIdx();
+    idxTab = CreateTableIdx();
     CreateTableEnc(&linkTab);
     start = clock();
-    q = LoadFile("../../TMDB_movie_dataset_v11.csv", tabIdx, &linkTab);
+    q = LoadFile("../../TMDB_movie_dataset_v11.csv", idxTab, &linkTab);
     end = clock();
     cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
 
     printf("Started:\n");
     printf("\t%d movies loaded.\n", q);
-    printf("\tIndexed table size: %d\n", LengthIdx(tabIdx));
+    printf("\tIndexed table size: %d\n", LengthIdx(idxTab));
     printf("\tLinked table size: %d\n", LengthEnc(linkTab));
     printf("\tCPU time: %lf\n", cpuTime);
     start = clock();
-    Sort(tabIdx);
+    Sort(idxTab);
     end = clock();
     cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
     printf("\tCPU time for sorting: %lf\n", cpuTime);
 
-    //SearchMoveIdx *searchTypeIdx = SearchTransposition;
     SearchMoveIdx *searchTypeIdx = SearchMoveToFront;
-    //SearchMoveEnc *searchTypeEnc = SearchTranspositionEnc;
     SearchMoveEnc *searchTypeEnc = SearchMoveToFrontEnc;
 
     while(1){
@@ -106,7 +104,7 @@ int main(void){
 
         printf("Indexed List:\n");
         start = clock();
-        int ind = SequentialSearch(tabIdx, id);
+        int ind = SequentialSearch(idxTab, id);
         end = clock();
         cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
         printf("\tSequential search operations: %d\n", OperationCount());
@@ -122,14 +120,14 @@ int main(void){
         */
 
         start = clock();
-        ind = BinarySearch(tabIdx, id);
+        ind = BinarySearch(idxTab, id);
         end = clock();
         cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
         printf("\tBinary search operations: %d\n", OperationCount());
         printf("\tCPU time: %lf\n", cpuTime);
 
         start = clock();
-        ind = InterpolationSearch(tabIdx, id);
+        ind = InterpolationSearch(idxTab, id);
         end = clock();
         cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
         printf("\tInterpolation search operations: %d\n", OperationCount());
@@ -139,7 +137,7 @@ int main(void){
             puts("\tmovie not found");
         }
         else{
-            tMovie movie = GetElementIdx(tabIdx, ind);
+            tMovie movie = GetElementIdx(idxTab, ind);
             PrintMovie(&movie);
         }
 
@@ -160,12 +158,13 @@ int main(void){
 
         if (!movie){
             puts("\tmovie not found");
-        }else{
+        }
+        else{
             PrintMovie(movie);
         }
    }
 
     //DestroyTableEnc(tabEnc);
-    DestroyTableIdx(tabIdx);
+    DestroyTableIdx(idxTab);
     return 0;
 }
