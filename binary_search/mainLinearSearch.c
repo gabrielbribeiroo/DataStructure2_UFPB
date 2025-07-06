@@ -92,11 +92,11 @@ int main(void){
     start = clock();
     Sort(idxTab);
     end = clock();
-    cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
+    cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;    
     printf("\tCPU time for sorting: %lf\n", cpuTime);
 
-    SearchMoveIdx *searchTypeIdx = SearchMoveToFront;
-    SearchMoveEnc *searchTypeEnc = SearchMoveToFrontEnc;
+    SearchMoveIdx *searchTypeIdx = MoveToFrontSearchLinkedTable();
+    SearchMoveEnc *searchTypeEnc = MoveToFrontSearchLinkedTable();
 
     while(1){
         printf("\nEnter the movie ID to search: ");
@@ -137,8 +137,8 @@ int main(void){
             puts("\tmovie not found");
         }
         else{
-            tMovie movie = GetElementIdx(idxTab, ind);
-            PrintMovie(&movie);
+            tMovie *movie = GetElementIdx(idxTab, ind);
+            PrintMovie(movie);
         }
 
         printf("\nLinked List:\n");
