@@ -8,18 +8,18 @@
 #define MAX_LINE 5000
 
 typedef int SearchMoveIdx(tTabelaIdx *tab, int key);
-typedef tDado * SearchMoveEnc(tTabelaEnc **tab, int key);
+typedef tDado * SearchMoveEnc(tLinkedTable **tab, int key);
 
 void RemoveNewline(char *str){
     if (str[strlen(str) - 1] == '\n')
         str[strlen(str) - 1] = '\0';
 }
 
-int LoadFile(const char *filename, tTabelaIdx *tabIdx, tTabelaEnc **tabEnc){
+int LoadFile(const char *filename, tTabelaIdx *tabIdx, tLinkedTable **tabEnc){
     FILE *fp;
     char line[MAX_LINE+1], *id, *title, *rating, *votes, *comma, *quote;
     int count;
-    tFilme movie;
+    tMovie movie;
 
     fp = fopen(filename, "r");
     if (!fp){
@@ -57,7 +57,7 @@ int LoadFile(const char *filename, tTabelaIdx *tabIdx, tTabelaEnc **tabEnc){
             votes = quote + 3;
             quote = strchr(votes, '\"');
             *quote = '\0';
-            movie.qVotes = strtod(votes, NULL);
+            movie.numVotes = strtod(votes, NULL);
 
             count++;
             //printf("Movie: %s [%s] (id=%s, votes=%s)\n", title, rating, id, votes);
@@ -72,22 +72,22 @@ int LoadFile(const char *filename, tTabelaIdx *tabIdx, tTabelaEnc **tabEnc){
 
 int main(void){
     tTabelaIdx *tabIdx;
-    tTabelaEnc *tabEnc;
+    tLinkedTable *linkTab;
     int q, id;
     clock_t start, end;
     double cpuTime;
 
     tabIdx = CreateTableIdx();
-    CreateTableEnc(&tabEnc);
+    CreateTableEnc(&linkTab);
     start = clock();
-    q = LoadFile("../../TMDB_movie_dataset_v11.csv", tabIdx, &tabEnc);
+    q = LoadFile("../../TMDB_movie_dataset_v11.csv", tabIdx, &linkTab);
     end = clock();
     cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
 
     printf("Started:\n");
     printf("\t%d movies loaded.\n", q);
     printf("\tIndexed table size: %d\n", LengthIdx(tabIdx));
-    printf("\tLinked table size: %d\n", LengthEnc(tabEnc));
+    printf("\tLinked table size: %d\n", LengthEnc(linkTab));
     printf("\tCPU time: %lf\n", cpuTime);
     start = clock();
     Sort(tabIdx);
@@ -137,21 +137,22 @@ int main(void){
 
         if (ind < 0){
             puts("\tmovie not found");
-        }else{
-            tFilme movie = GetElementIdx(tabIdx, ind);
+        }
+        else{
+            tMovie movie = GetElementIdx(tabIdx, ind);
             PrintMovie(&movie);
         }
 
         printf("\nLinked List:\n");
         start = clock();
-        tFilme * movie = SequentialSearchEnc(tabEnc, id);
+        tMovie * movie = SequentialSearchEnc(linkTab, id);
         end = clock();
         cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
         printf("\tLinked search operations: %d\n", OperationCountEnc());
         printf("\tCPU time: %lf\n", cpuTime);
         
         start = clock();
-        movie = searchTypeEnc(&tabEnc, id);
+        movie = searchTypeEnc(&linkTab, id);
         end = clock();
         cpuTime = ((double) (end - start)) / CLOCKS_PER_SEC;
         printf("\tSearch with move operations: %d\n", OperationCountEnc());
