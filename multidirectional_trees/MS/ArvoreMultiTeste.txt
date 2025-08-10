@@ -1,0 +1,165 @@
+0.
+
+Numero de chaves: 4
+Numero de filhos: 5
+Chaves e posicoes = { (171680, 1) (1081983, 0) (14134096, 3) (19068609, 2) }
+Filhos = {-1, 12, 2, 3, 1}
+
+----------
+
+1.
+
+Numero de chaves: 4
+Numero de filhos: 5
+Chaves e posicoes = { (19339564, 6) (20163315, 4) (20235609, 13) (20235610, 12) }
+Filhos = {8, 4, -1, -1, 7}
+
+----------
+
+2.
+
+Numero de chaves: 4
+Numero de filhos: 5
+Chaves e posicoes = { (1999294, 10) (6895602, 9) (13602295, 8) (13614268, 5) }
+Filhos = {-1, 5, 6, 13, 16}
+
+----------
+
+3.
+
+Numero de chaves: 4
+Numero de filhos: 5
+Chaves e posicoes = { (14879383, 29) (14880043, 22) (15896466, 7) (16172806, 11) }
+Filhos = {-1, -1, -1, -1, 11}
+
+----------
+
+4.
+
+Numero de chaves: 2
+Numero de filhos: 3
+Chaves e posicoes = { (19575367, 15) (19785139, 14) }
+Filhos = {-1, -1, -1}
+
+----------
+
+5.
+
+Numero de chaves: 3
+Numero de filhos: 4
+Chaves e posicoes = { (2639961, 16) (6634167, 18) (6854623, 27) }
+Filhos = {-1, -1, -1, -1}
+
+----------
+
+6.
+
+Numero de chaves: 4
+Numero de filhos: 5
+Chaves e posicoes = { (10485843, 26) (12103276, 17) (12481382, 20) (13540974, 28) }
+Filhos = {9, 14, -1, -1, -1}
+
+----------
+
+7.
+
+Numero de chaves: 4
+Numero de filhos: 5
+Chaves e posicoes = { (20748290, 25) (20848709, 23) (20851503, 19) (21430178, 21) }
+Filhos = {-1, -1, -1, 10, -1}
+
+----------
+
+8.
+
+Numero de chaves: 1
+Numero de filhos: 2
+Chaves e posicoes = { (19152754, 24) }
+Filhos = {-1, -1}
+
+----------
+
+9.
+
+Numero de chaves: 4
+Numero de filhos: 5
+Chaves e posicoes = { (6986234, 41) (7542389, 43) (8535310, 30) (10211919, 35) }
+Filhos = {-1, -1, -1, 17, -1}
+
+----------
+
+10.
+
+Numero de chaves: 2
+Numero de filhos: 3
+Chaves e posicoes = { (20942449, 31) (21365326, 40) }
+Filhos = {-1, -1, -1}
+
+----------
+
+11.
+
+Numero de chaves: 4
+Numero de filhos: 5
+Chaves e posicoes = { (17059241, 32) (18796160, 42) (18806574, 37) (18809529, 36) }
+Filhos = {15, -1, -1, -1, -1}
+
+----------
+
+12.
+
+Numero de chaves: 1
+Numero de filhos: 2
+Chaves e posicoes = { (234197, 33) }
+Filhos = {-1, -1}
+
+----------
+
+13.
+
+Numero de chaves: 1
+Numero de filhos: 2
+Chaves e posicoes = { (13613960, 34) }
+Filhos = {-1, -1}
+
+----------
+
+14.
+
+Numero de chaves: 2
+Numero de filhos: 3
+Chaves e posicoes = { (11147524, 39) (11159460, 38) }
+Filhos = {-1, -1, -1}
+
+----------
+
+15.
+
+Numero de chaves: 1
+Numero de filhos: 2
+Chaves e posicoes = { (16999468, 44) }
+Filhos = {-1, -1}
+
+----------
+
+16.
+
+Numero de chaves: 3
+Numero de filhos: 4
+Chaves e posicoes = { (13804629, 47) (14071738, 46) (14072181, 45) }
+Filhos = {-1, -1, -1, -1}
+
+----------
+
+17.
+
+Numero de chaves: 2
+Numero de filhos: 3
+Chaves e posicoes = { (8745980, 49) (9280243, 48) }
+Filhos = {-1, -1, -1}
+
+----------
+
+	>>> Grau da arvore (G): 5
+	>>> Numero total de nos: 18
+

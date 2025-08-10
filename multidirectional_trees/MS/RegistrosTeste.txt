@@ -1,0 +1,649 @@
+0.
+
+Codigo do aluno: 400008471786
+Codigo do curso: 1081983
+Nome da IES: UNIVERSIDADE ESTADUAL DO MARANHÃO
+Nome do curso: AGRONOMIA
+Sexo do aluno: Masculino
+Idade do aluno: 21
+UF de nascimento: MARANHÃO
+Ano de ingresso: 2009
+
+----------
+
+1.
+
+Codigo do aluno: 400008476884
+Codigo do curso: 171680
+Nome da IES: UNIVERSIDADE ESTADUAL DO MARANHÃO
+Nome do curso: LETRAS - PORTUGUÊS
+Sexo do aluno: Masculino
+Idade do aluno: 29
+UF de nascimento: MARANHÃO
+Ano de ingresso: 2009
+
+----------
+
+2.
+
+Codigo do aluno: 400008463151
+Codigo do curso: 19068609
+Nome da IES: UNIVERSIDADE FEDERAL DO PARÁ
+Nome do curso: CIÊNCIAS CONTÁBEIS
+Sexo do aluno: Masculino
+Idade do aluno: 26
+UF de nascimento: PARÁ
+Ano de ingresso: 2004
+
+----------
+
+3.
+
+Codigo do aluno: 400008686902
+Codigo do curso: 14134096
+Nome da IES: FACULDADE DE TECNOLOGIA DE GUARATINGUETÁ
+Nome do curso: INFORMÁTICA
+Sexo do aluno: Feminino
+Idade do aluno: 27
+UF de nascimento: SÃO PAULO
+Ano de ingresso: 2008
+
+----------
+
+4.
+
+Codigo do aluno: 400006306992
+Codigo do curso: 20163315
+Nome da IES: UNIVERSIDADE ESTADUAL DE CAMPINAS
+Nome do curso: GEOLOGIA
+Sexo do aluno: Masculino
+Idade do aluno: 25
+UF de nascimento: MINAS GERAIS
+Ano de ingresso: 2009
+
+----------
+
+5.
+
+Codigo do aluno: 400004761504
+Codigo do curso: 13614268
+Nome da IES: INSTITUTO SUPERIOR DE EDUCAÇÃO PAULO MARTINS
+Nome do curso: PEDAGOGIA
+Sexo do aluno: Masculino
+Idade do aluno: 39
+UF de nascimento: TOCANTINS
+Ano de ingresso: 2009
+
+----------
+
+6.
+
+Codigo do aluno: 400007307372
+Codigo do curso: 19339564
+Nome da IES: UNIVERSIDADE DE SÃO PAULO
+Nome do curso: CIÊNCIAS ECONÔMICAS
+Sexo do aluno: Feminino
+Idade do aluno: 24
+UF de nascimento: SÃO PAULO
+Ano de ingresso: 2011
+
+----------
+
+7.
+
+Codigo do aluno: 400009928751
+Codigo do curso: 15896466
+Nome da IES: FACULDADE DE CIÊNCIAS SOCIAIS APLICADAS
+Nome do curso: DIREITO
+Sexo do aluno: Masculino
+Idade do aluno: 32
+UF de nascimento: SANTA CATARINA
+Ano de ingresso: 2010
+
+----------
+
+8.
+
+Codigo do aluno: 400003626400
+Codigo do curso: 13602295
+Nome da IES: FACULDADE PROJEÇÃO DE CEILÂNDIA
+Nome do curso: SERVIÇO SOCIAL
+Sexo do aluno: Masculino
+Idade do aluno: 39
+UF de nascimento: DISTRITO FEDERAL
+Ano de ingresso: 2008
+
+----------
+
+9.
+
+Codigo do aluno: 400006338040
+Codigo do curso: 6895602
+Nome da IES: FACULDADE DE ADMINISTRAÇÃO, CIÊNCIAS, EDUCAÇÃO E LETRAS
+Nome do curso: PSICOLOGIA
+Sexo do aluno: Masculino
+Idade do aluno: 21
+UF de nascimento:
+Ano de ingresso: 2011
+
+----------
+
+10.
+
+Codigo do aluno: 400005656492
+Codigo do curso: 1999294
+Nome da IES: INSTITUTO DE ESTUDOS SUPERIORES DA AMAZÔNIA
+Nome do curso: SEGURANÇA NO TRABALHO
+Sexo do aluno: Feminino
+Idade do aluno: 21
+UF de nascimento: PARÁ
+Ano de ingresso: 2009
+
+----------
+
+11.
+
+Codigo do aluno: 400010978557
+Codigo do curso: 16172806
+Nome da IES: FACULDADE ALVES FARIA
+Nome do curso: PSICOLOGIA
+Sexo do aluno: Masculino
+Idade do aluno: 22
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2008
+
+----------
+
+12.
+
+Codigo do aluno: 400007234073
+Codigo do curso: 20235610
+Nome da IES: UNIVERSIDADE DE SÃO PAULO
+Nome do curso: ENGENHARIA ELÉTRICA - ÊNFASE EM ENERGIA E AUTOMAÇÃO
+Sexo do aluno: Feminino
+Idade do aluno: 25
+UF de nascimento: SÃO PAULO
+Ano de ingresso: 2008
+
+----------
+
+13.
+
+Codigo do aluno: 400007234073
+Codigo do curso: 20235609
+Nome da IES: UNIVERSIDADE DE SÃO PAULO
+Nome do curso: ABI - ENGENHARIA
+Sexo do aluno: Feminino
+Idade do aluno: 25
+UF de nascimento: SÃO PAULO
+Ano de ingresso: 2008
+
+----------
+
+14.
+
+Codigo do aluno: 400008177649
+Codigo do curso: 19785139
+Nome da IES: UNIVERSIDADE ANHANGUERA - UNIDERP
+Nome do curso: GESTÃO DE RECURSOS HUMANOS
+Sexo do aluno: Masculino
+Idade do aluno: 26
+UF de nascimento: AMAZONAS
+Ano de ingresso: 2012
+
+----------
+
+15.
+
+Codigo do aluno: 400008177649
+Codigo do curso: 19575367
+Nome da IES: UNIVERSIDADE FEDERAL DE RORAIMA
+Nome do curso: INFORMÁTICA
+Sexo do aluno: Masculino
+Idade do aluno: 26
+UF de nascimento: AMAZONAS
+Ano de ingresso: 2012
+
+----------
+
+16.
+
+Codigo do aluno: 400008177649
+Codigo do curso: 2639961
+Nome da IES: UNIVERSIDADE ESTADUAL DE RORAIMA
+Nome do curso: CIÊNCIAS CONTÁBEIS
+Sexo do aluno: Masculino
+Idade do aluno: 26
+UF de nascimento: AMAZONAS
+Ano de ingresso: 2006
+
+----------
+
+17.
+
+Codigo do aluno: 400007515449
+Codigo do curso: 12103276
+Nome da IES: UNIVERSIDADE ESTÁCIO DE SÁ
+Nome do curso: COMUNICAÇÃO SOCIAL - JORNALISMO
+Sexo do aluno: Feminino
+Idade do aluno: 25
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2007
+
+----------
+
+18.
+
+Codigo do aluno: 400007547622
+Codigo do curso: 6634167
+Nome da IES: UNIVERSIDADE CÂNDIDO MENDES
+Nome do curso: DIREITO
+Sexo do aluno: Feminino
+Idade do aluno: 33
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2008
+
+----------
+
+19.
+
+Codigo do aluno: 400007752350
+Codigo do curso: 20851503
+Nome da IES: UNIVERSIDADE FEDERAL DO MARANHÃO
+Nome do curso: COMUNICAÇÃO SOCIAL - RELAÇÕES PÚBLICAS
+Sexo do aluno: Masculino
+Idade do aluno: 21
+UF de nascimento: MARANHÃO
+Ano de ingresso: 2009
+
+----------
+
+20.
+
+Codigo do aluno: 400007791272
+Codigo do curso: 12481382
+Nome da IES: UNIVERSIDADE ESTÁCIO DE SÁ
+Nome do curso: DIREITO
+Sexo do aluno: Feminino
+Idade do aluno: 27
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2004
+
+----------
+
+21.
+
+Codigo do aluno: 400007844177
+Codigo do curso: 21430178
+Nome da IES: UNIVERSIDADE ESTÁCIO DE SÁ
+Nome do curso: DIREITO
+Sexo do aluno: Feminino
+Idade do aluno: 30
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2000
+
+----------
+
+22.
+
+Codigo do aluno: 400007555842
+Codigo do curso: 14880043
+Nome da IES: FACULDADE ANHANGÜERA DE CAMPINAS
+Nome do curso: ENGENHARIA DE PRODUÇÃO
+Sexo do aluno: Masculino
+Idade do aluno: 21
+UF de nascimento: SÃO PAULO
+Ano de ingresso: 2009
+
+----------
+
+23.
+
+Codigo do aluno: 400007753040
+Codigo do curso: 20848709
+Nome da IES: UNIVERSIDADE FEDERAL DO MARANHÃO
+Nome do curso: ENGENHARIA QUÍMICA
+Sexo do aluno: Feminino
+Idade do aluno: 26
+UF de nascimento: MARANHÃO
+Ano de ingresso: 2009
+
+----------
+
+24.
+
+Codigo do aluno: 400007678576
+Codigo do curso: 19152754
+Nome da IES: UNIVERSIDADE FEDERAL DO RIO DE JANEIRO
+Nome do curso: ENFERMAGEM E OBSTETRÍCIA
+Sexo do aluno: Masculino
+Idade do aluno: 21
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2009
+
+----------
+
+25.
+
+Codigo do aluno: 400007679027
+Codigo do curso: 20748290
+Nome da IES: UNIVERSIDADE FEDERAL DO RIO DE JANEIRO
+Nome do curso: EDUCAÇÃO FÍSICA
+Sexo do aluno: Feminino
+Idade do aluno: 21
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2011
+
+----------
+
+26.
+
+Codigo do aluno: 400007539777
+Codigo do curso: 10485843
+Nome da IES: UNIVERSIDADE ESTÁCIO DE SÁ
+Nome do curso: DIREITO
+Sexo do aluno: Feminino
+Idade do aluno: 21
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2012
+
+----------
+
+27.
+
+Codigo do aluno: 400008835147
+Codigo do curso: 6854623
+Nome da IES: CENTRO UNIVERSITÁRIO LEONARDO DA VINCI
+Nome do curso: PEDAGOGIA
+Sexo do aluno: Masculino
+Idade do aluno: 44
+UF de nascimento: RIO GRANDE DO SUL
+Ano de ingresso: 2010
+
+----------
+
+28.
+
+Codigo do aluno: 400007577361
+Codigo do curso: 13540974
+Nome da IES: UNIVERSIDADE ESTÁCIO DE SÁ
+Nome do curso: GESTÃO DE RECURSOS HUMANOS
+Sexo do aluno: Masculino
+Idade do aluno: 38
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2011
+
+----------
+
+29.
+
+Codigo do aluno: 400007607257
+Codigo do curso: 14879383
+Nome da IES: FACULDADE ANHANGÜERA DE CAMPINAS
+Nome do curso: CIÊNCIAS CONTÁBEIS
+Sexo do aluno: Feminino
+Idade do aluno: 22
+UF de nascimento: SÃO PAULO
+Ano de ingresso: 2008
+
+----------
+
+30.
+
+Codigo do aluno: 400007596918
+Codigo do curso: 8535310
+Nome da IES: UNIVERSIDADE SALGADO DE OLIVEIRA
+Nome do curso: ADMINISTRAÇÃO
+Sexo do aluno: Masculino
+Idade do aluno: 25
+UF de nascimento: MINAS GERAIS
+Ano de ingresso: 2010
+
+----------
+
+31.
+
+Codigo do aluno: 400011222102
+Codigo do curso: 20942449
+Nome da IES: UNIVERSIDADE FEDERAL FLUMINENSE
+Nome do curso: MATEMÁTICA
+Sexo do aluno: Masculino
+Idade do aluno: 21
+UF de nascimento: RIO DE JANEIRO
+Ano de ingresso: 2010
+
+----------
+
+32.
+
+Codigo do aluno: 400009172487
+Codigo do curso: 17059241
+Nome da IES: UNIVERSIDADE FEDERAL DA INTEGRAÇÃO LATINO-AMERICANA
+Nome do curso: RELAÇÕES INTERNACIONAIS E INTEGRAÇÃO
+Sexo do aluno: Masculino
+Idade do aluno: 26
+UF de nascimento: 
+Ano de ingresso: 2012
+
+----------
+
+33.
+
+Codigo do aluno: 400008176445
+Codigo do curso: 234197
+Nome da IES: UNIVERSIDADE ESTADUAL DE RORAIMA
+Nome do curso: TURISMO
+Sexo do aluno: Masculino
+Idade do aluno: 38
+UF de nascimento: 
+Ano de ingresso: 2007
+
+----------
+
+34.
+
+Codigo do aluno: 400004761357
+Codigo do curso: 13613960
+Nome da IES: INSTITUTO SUPERIOR DE EDUCAÇÃO PAULO MARTINS
+Nome do curso: LETRAS - PORTUGUÊS
+Sexo do aluno: Masculino
+Idade do aluno: 30
+UF de nascimento: DISTRITO FEDERAL
+Ano de ingresso: 2009
+
+----------
+
+35.
+
+Codigo do aluno: 400004269560
+Codigo do curso: 10211919
+Nome da IES: FACULDADE DE TECNOLOGIA E CIÊNCIAS
+Nome do curso: PEDAGOGIA
+Sexo do aluno: Masculino
+Idade do aluno: 36
+UF de nascimento: BAHIA
+Ano de ingresso: 2009
+
+----------
+
+36.
+
+Codigo do aluno: 400004190096
+Codigo do curso: 18809529
+Nome da IES: UNIVERSIDADE FEDERAL DE MINAS GERAIS
+Nome do curso: ARQUITETURA E URBANISMO
+Sexo do aluno: Feminino
+Idade do aluno: 22
+UF de nascimento: 
+Ano de ingresso: 2009
+
+----------
+
+37.
+
+Codigo do aluno: 400004181905
+Codigo do curso: 18806574
+Nome da IES: UNIVERSIDADE FEDERAL DE MINAS GERAIS
+Nome do curso: GEOGRAFIA
+Sexo do aluno: Masculino
+Idade do aluno: 22
+UF de nascimento: 
+Ano de ingresso: 2009
+
+----------
+
+38.
+
+Codigo do aluno: 400004209865
+Codigo do curso: 11159460
+Nome da IES: CENTRO UNIVERSITÁRIO EURO-AMERICANO
+Nome do curso: DIREITO
+Sexo do aluno: Feminino
+Idade do aluno: 34
+UF de nascimento: MINAS GERAIS
+Ano de ingresso: 2008
+
+----------
+
+39.
+
+Codigo do aluno: 400004209912
+Codigo do curso: 11147524
+Nome da IES: CENTRO UNIVERSITÁRIO EURO-AMERICANO
+Nome do curso: DIREITO
+Sexo do aluno: Feminino
+Idade do aluno: 24
+UF de nascimento: PARÁ
+Ano de ingresso: 2008
+
+----------
+
+40.
+
+Codigo do aluno: 400004355223
+Codigo do curso: 21365326
+Nome da IES: UNIVERSIDADE FEDERAL DE UBERLÂNDIA
+Nome do curso: CIÊNCIA DA COMPUTAÇÃO
+Sexo do aluno: Feminino
+Idade do aluno: 22
+UF de nascimento: MINAS GERAIS
+Ano de ingresso: 2010
+
+----------
+
+41.
+
+Codigo do aluno: 400004402437
+Codigo do curso: 6986234
+Nome da IES: FACULDADE INTEGRADO DE CAMPO MOURÃO
+Nome do curso: AGRONOMIA
+Sexo do aluno: Feminino
+Idade do aluno: 23
+UF de nascimento: PARANÁ
+Ano de ingresso: 2008
+
+----------
+
+42.
+
+Codigo do aluno: 400004191060
+Codigo do curso: 18796160
+Nome da IES: UNIVERSIDADE FEDERAL DE MINAS GERAIS
+Nome do curso: CIÊNCIAS BIOLÓGICAS
+Sexo do aluno: Feminino
+Idade do aluno: 28
+UF de nascimento: 
+Ano de ingresso: 2008
+
+----------
+
+43.
+
+Codigo do aluno: 400004432764
+Codigo do curso: 7542389
+Nome da IES: FACULDADE PITÁGORAS DE BELO HORIZONTE
+Nome do curso: ENGENHARIA MECÂNICA
+Sexo do aluno: Feminino
+Idade do aluno: 24
+UF de nascimento: MINAS GERAIS
+Ano de ingresso: 2011
+
+----------
+
+44.
+
+Codigo do aluno: 400004432791
+Codigo do curso: 16999468
+Nome da IES: FACULDADE DE CIÊNCIA E TECNOLOGIA DE MONTES CLAROS
+Nome do curso: ENGENHARIA
+Sexo do aluno: Feminino
+Idade do aluno: 25
+UF de nascimento: MINAS GERAIS
+Ano de ingresso: 2007
+
+----------
+
+45.
+
+Codigo do aluno: 400004442376
+Codigo do curso: 14072181
+Nome da IES: Centro Universitário Estácio do Ceará
+Nome do curso: DIREITO
+Sexo do aluno: Feminino
+Idade do aluno: 24
+UF de nascimento: CEARÁ
+Ano de ingresso: 2009
+
+----------
+
+46.
+
+Codigo do aluno: 400004442623
+Codigo do curso: 14071738
+Nome da IES: Centro Universitário Estácio do Ceará
+Nome do curso: PUBLICIDADE E PROPAGANDA
+Sexo do aluno: Masculino
+Idade do aluno: 29
+UF de nascimento: CEARÁ
+Ano de ingresso: 2005
+
+----------
+
+47.
+
+Codigo do aluno: 400004452667
+Codigo do curso: 13804629
+Nome da IES: Centro Universitário Estácio do Ceará
+Nome do curso: ADMINISTRAÇÃO
+Sexo do aluno: Feminino
+Idade do aluno: 25
+UF de nascimento: CEARÁ
+Ano de ingresso: 2007
+
+----------
+
+48.
+
+Codigo do aluno: 400004508834
+Codigo do curso: 9280243
+Nome da IES: CENTRO UNIVERSITÁRIO NEWTON PAIVA
+Nome do curso: ENGENHARIA CIVIL
+Sexo do aluno: Masculino
+Idade do aluno: 30
+UF de nascimento: MINAS GERAIS
+Ano de ingresso: 2009
+
+----------
+
+49.
+
+Codigo do aluno: 400004532628
+Codigo do curso: 8745980
+Nome da IES: CENTRO UNIVERSITÁRIO LEONARDO DA VINCI
+Nome do curso: ADMINISTRAÇÃO
+Sexo do aluno: Feminino
+Idade do aluno: 41
+UF de nascimento: SANTA CATARINA
+Ano de ingresso: 2011
+
+----------
