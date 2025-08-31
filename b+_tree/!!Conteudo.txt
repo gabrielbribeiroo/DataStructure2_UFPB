@@ -1,0 +1,23 @@
+Conteúdo deste diretório:
+
+Arquivos com extensão .h e arquivos com extensão .c: Implementação de árvore B+
+
+ArvoreBM.dat: Arquivo que contém a árvore B+ criada pela implementação de árvore B+
+
+Makefile: Makefile da implementação de árvore B+
+
+ArvoreBMTeste.txt: Arquivo criado pelo programa !EscreveNosArvoreBM.c. É usado para testes e depuração
+
+ChavesOrdenadasBM.txt: Arquivo contendo as chaves ordenadas que se encontram na árvore B+ criada. É útil em depuração.
+
+RegistrosNaoEncontrados.txt: Usado para manualmente anotar algum registro que não tenha sido encontrado numa execução 
+                             do programa de árvore B+. Idealmente, não haverá nenhum registro.
+
+RegistrosParaInserir.txt: Registros com dados para copiar e colar durante testes de inserção. Não precisa inserir todos.
+                          Escolha cerca de 10 registros aleatoriamente e insira-os.
+
+RegistrosTeste.txt: Registros do arquivo MiniCensoMEC2012.bin em formato de texto. Facilita testes e depuração.
+
+MiniCensoMEC2012.bin: Arquivo de registros usado para construir a árvore B+. É uma mini versão do arquivo CensoMEC2012.bin 
+                      que contém apenas 50 registros.
+
