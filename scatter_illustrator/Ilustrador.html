@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ilustrador</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 80vw 50vw;
+        }
+
+        .coluna-esquerda {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            gap: 0px;
+            padding: 0px;
+        }
+
+        .celula-svg {
+            background: #ffffff;
+            padding: 0px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            overflow: hidden;
+          }
+
+        .coluna-direita {
+            display: grid;
+            grid-template-rows: 90vh 10vh;
+      			font-family: Arial;
+            padding: 0px;
+            gap: 0px;
+            overflow: auto; /* Permite rolagem */
+        }
+
+		    .celula-codigo {
+            display: grid;
+            padding: 0px;
+            gap: 0px;
+            font-size: 12px;
+            margin: 5px;
+            margin-top: 0px;
+            margin-bottom: -5px;
+            overflow: auto; /* Permite rolagem */
+        }
+
+        .celula-comandos {
+            display: grid;
+            padding: 5px;
+            margin: 5px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+		}
+
+		.celula {
+            background: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .meu-link {
+          color: blue; /* Cor do link */
+          text-decoration: underline; /* Sublinhado para parecer um link */
+          cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+      }
+
+      .container {
+            background: #f0f0f0;
+            padding: 0px;
+			width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: panning 45s infinite linear;
+            overflow: hidden;
+            position: relative;
+            cursor: context-menu; 
+        }
+
+        @keyframes panning {
+            0% {
+                background-position: 0% 0%;
+            }
+            25% {
+                background-position: 100% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            75% {
+                background-position: 0% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        @media (hover: none) {
+            .overlay {
+                opacity: 0.8;
+            }
+        }
+
+		.overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: rgba(0, 0, 0, 1);
+            background: rgba(255, 255, 255, 0.25);
+            padding: 0px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            backdrop-filter: blur(10px);
+            text-align: left;
+            max-height: 45%;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            line-height: 1.0;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+		    transition-delay: 0.2s;
+        }
+
+        .overlay-text {
+            font-family: Arial;
+            font-size: 16px ;
+            padding: 2px;
+            max-width: 95%;
+        }
+    </style>
+
+<link href="prism.css" rel="stylesheet" />
+<script src="prism.js"></script>
+<script src="ilustrador-base.js"></script>
+</head>
+<body>
+    <div class="coluna-esquerda" id="colunaSvg">
+        <div class="celula-svg">
+            <svg id="graficosSVG"  xmlns="http://www.w3.org/2000/svg" >
+              <defs>
+
+                <g id="umaVariavel">
+                  <rect id="caixaExternaVar" fill="none" stroke-width="2" stroke-dasharray="18,2,2,2" stroke-opacity="1" stroke="black" x="0" y="0" width="45" height="29">
+                    <animate id="animacaoCaixaVar" attributeName="stroke-dashoffset" from="24" to="0" dur="3s" repeatCount="indefinite"></animate>
+                  </rect>
+                  <rect id="caixaNomeVar" fill-opacity="0.25" stroke-width="2" stroke-dasharray="0,45,77" stroke-opacity="1" stroke="black" x="0" y="29" width="45" height="16"></rect>
+                </g>
+
+                <text id="textoNomeVar" x="22.5" y="38" fill="black" font-size="10" font-family="Arial" font-weight="bold" text-anchor="middle" dominant-baseline="middle"/>
+
+                <text id="textoValorVar" x="22.5" y="15" fill="black" font-size="16" font-family="Arial" font-weight="bold" text-anchor="middle" dominant-baseline="middle"/>
+
+                <animate id="animacaoSurgir" attributeName="opacity" from="0" to="1" dur="0.5s" repeatCount="1" fill="freeze" begin="indefinite"></animate>
+            
+                <rect id="caixaDestaque" stroke-width="3" opacity="0.85" x="0" y="0" height="29" width="45">
+                  <animate id="animacaoDestaque" attributeName="opacity" values="0.30;0.45;0.60;0.45;0.30" dur="2s" repeatCount="indefinite" begin="0s"/>
+                </rect>
+                    
+                <g id="umArray" width="135" height="65">                  
+                  <rect id="caixaExternaArray" fill="none" stroke-width="1" stroke-dasharray="6,2,2,2" stroke-opacity="0.5" stroke="grey" x="0" y="0" width="45" height="29"></rect>
+                  <rect id="caixaNomeArray" fill-opacity="0.25" stroke-width="2" stroke-dasharray="0,45,77" stroke-opacity="1" stroke="black" x="0" y="45" width="45" height="16"></rect>
+
+                  <g id="umElementoArray">
+                    <rect id="caixaExternaElementoArray" fill="none" stroke-width="2" stroke-dasharray="18,2,2,2" stroke-opacity="1" stroke="black" x="0" y="0" width="45" height="29">
+                      <animate id="animacaoCaixaElementoArray" attributeName="stroke-dashoffset" from="24" to="0" dur="3s" repeatCount="indefinite"></animate>
+                    </rect>
+
+                    <rect id="caixaIndiceArray" fill-opacity="0.125" stroke-width="2" stroke-dasharray="0,45,77" stroke-opacity="1" stroke="black" x="0" y="29" width="45" height="16"></rect>
+                    <text id="textoIndiceElementoArray" x="22.5" y="38" fill="black" font-size="8" font-family="Arial" text-anchor="middle" dominant-baseline="middle">0</text>
+                  </g>  
+                </g>
+
+                <text id="textoValorElementoArray" x="22.5" y="14.5" fill="black" font-size="16" font-family="Arial" font-weight="bold" text-anchor="middle" dominant-baseline="middle">_</text>
+                <text id="textoNomeArray" x="22.5" y="54" fill="black" font-size="10" font-family="Arial" font-weight="bold" text-anchor="middle" dominant-baseline="middle"/>
+
+                <g id="umNoMulti" viewBox="-1 -1 137 67" width="135" height="65">
+                  <rect id="caixaInfoNoMulti" fill-opacity="0.125" stroke-width="2" stroke-opacity="1" stroke="black" x="0" y="0" rx="4" ry="4" width="45" height="16"></rect>
+                  
+                  <rect id="caixaExternaNoMulti" fill="none" stroke-width="1" stroke-dasharray="6,2,2,2" stroke-opacity="0.5" stroke="grey" x="0" y="16" width="45" height="29"></rect>
+
+                  <g id="umElementoNoMulti">
+                    <rect id="caixaExternaElementoNoMulti" fill="none" stroke-width="2" stroke-dasharray="18,2,2,2" stroke-opacity="1" stroke="black" x="0" y="16" width="45" height="29">
+                      <animate id="animacaoCaixaElementoMulti" attributeName="stroke-dashoffset" from="24" to="0" dur="3s" repeatCount="indefinite"></animate>
+                    </rect>
+
+                    <rect id="caixaIndiceMulti" fill-opacity="0.125" stroke-width="2" stroke-dasharray="0,45,77" stroke-opacity="1" stroke="black" x="0" y="45" width="45" height="16"></rect>
+                    <text id="textoIndiceElementoNoMulti" x="22.5" y="54" fill="black" font-size="8" font-family="Arial" text-anchor="middle" dominant-baseline="middle">0</text>
+                  </g>  
+
+                  <g id="umFilhoNoMulti">
+                    <rect id="caixaFilhoNoMulti" fill-opacity="1" stroke-width="1" stroke-dasharray="1,1" stroke-opacity="1" stroke="black" x="0" y="53" rx="2" ry="2" width="8" height="8"></rect>
+                  </g>
+                </g>
+
+                <text id="textoInfoNoMulti" x="23.5" y="9" fill="black" font-size="8" font-family="Arial" font-weight="bold" text-anchor="middle" dominant-baseline="middle"></text>
+                <text id="textoValorElementoNoMulti" x="22.5" y="32.5" fill="black" font-size="16" font-family="Arial" font-weight="bold" text-anchor="middle" dominant-baseline="middle">_</text>
+                <text id="textoFilhoNoMulti" x="0" y="61" fill="black" font-size="5" font-family="Arial" text-anchor="middle" dominant-baseline="middle">-1</text>
+                <line id="setaFilhoNoMulti" x1="4" y1="57" x2="4" y2="61" points="4,57 4,61" fill="none" stroke="black" stroke-width="1" />
+                <polyline id="setaFilhoNoMulti2" points="4,57 4,61" fill="none" stroke="black" stroke-width="1" />
+              </defs>
+              <!-- <use href="#umNoMulti" x="5" y="200" fill="tomato"></use> -->
+              <!-- <use href="#umArray" x="5" y="200" fill="tomato"></use> -->
+            </svg>
+        </div>
+    </div>
+
+    <div class="coluna-direita">
+        <div class="celula-codigo">
+            <pre class="line-numbers" id="code" data-line><code class="language-clike" id="fonte"></code></pre>
+        </div>
+
+		<div class="celula-comandos">
+            <div>
+              <span class="meu-link" onclick="carregarCodigo()">Carregar c&oacute;digo-fonte</span>
+              <span class="meu-link" onclick="executa()">Executa</span>
+              <span class="meu-link" onclick="alteraVelocidade(+1)">-</span>
+              <span class="meu-link" onclick="alteraVelocidade(-1)">+</span>
+              <span class="meu-link" onclick="proximoPasso()">Pr&oacute;ximo Passo</span>
+              <span class="meu-link" onclick="zoom(1.2)">- Zoom</span>
+              <span class="meu-link" onclick="zoom(0.8)">+ Zoom</span>
+            </div>
+   		</div>
+       <script>
+        const svg = document.getElementById('graficosSVG');
+        const div = document.getElementById('colunaSvg');
+
+        // Define o viewBox com base nas dimensões do conteúdo
+        svg.setAttribute('viewBox', `${0} ${0} ${div.clientWidth} ${div.clientHeight}`);
+        console.log(`vb: ${0} ${0} ${div.clientWidth} ${div.clientHeight}`);
+        
+        function zoom(scale) {
+          const viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+          viewBox[2] *= scale; // Ajusta a largura do viewBox
+          viewBox[3] *= scale; // Ajusta a altura do viewBox
+          svg.setAttribute('viewBox', viewBox.join(' '));
+        }
+    
+        let isPanning = false;
+        let startPoint = { x: 0, y: 0 };
+    
+        svg.addEventListener('mousedown', (e) => {
+          isPanning = true;
+          startPoint = { x: e.clientX, y: e.clientY };
+        });
+    
+        svg.addEventListener('mousemove', (e) => {
+          if (isPanning) {
+            const dx = e.clientX - startPoint.x;
+            const dy = e.clientY - startPoint.y;
+            startPoint = { x: e.clientX, y: e.clientY };
+    
+            const viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+            viewBox[0] -= dx;
+            viewBox[1] -= dy;
+            svg.setAttribute('viewBox', viewBox.join(' '));
+          }
+        });
+    
+        svg.addEventListener('mouseup', () => {
+          isPanning = false;
+        });
+    
+        svg.addEventListener('mouseleave', () => {
+          isPanning = false;
+        });
+      </script>
+</body>
+<!--
+50 200
+40 20
+70 120
+300 220
+-10 -50
+25 35
+49 45
+58 65
+97 80
+140 175
+215 207 
+250 270
+420 375
+-70 -95
+-30 -25
+-1 -5
+24 21
+27 29
+39 37
+43 41
+47 46
+55 51
+62 63
+69 67
+75 71
+81 85
+105 101
+150 145
+190 187
+202 203
+210 213
+219 217
+230 240
+260 251
+285 280
+350 310
+410 390
+470 463
+-->
+</html>
