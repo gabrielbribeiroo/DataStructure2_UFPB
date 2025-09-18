@@ -29,3 +29,33 @@ int64_t currentTimeMillis() {
     int64_t s2 = (time.tv_usec / 1000);
     return s1 + s2;
 }
+
+void IniciaArrayAleatorio(unsigned char ar[], int t){
+    static int primeiro = 1;
+    int i;
+    
+    if (primeiro){
+        srand(time(NULL));
+        primeiro = 0;
+    }
+    
+    for(i = 0; i < t; i++){
+        ar[i] = rand() % 256;
+    }
+}
+
+void IniciaArrayOrdenado(unsigned char ar[], int t){
+    int i;
+    
+    for(i = 0; i < t; i++){
+        ar[i] = i*256 / t;
+    }
+}
+
+void IniciaArrayInversamenteOrdenado(unsigned char ar[], int t){
+    int i;
+    
+    for(i = 0; i < t; i++){
+        ar[i] = (t-i)*256 / t;
+    }
+}
