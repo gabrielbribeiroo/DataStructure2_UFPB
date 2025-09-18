@@ -163,3 +163,68 @@ void InsertionSort(unsigned char ar[], int t){
         ar[j+1] = aux;
     }
 }
+
+void QuickSort(unsigned char ar[], int t){
+    if (t <= 1){
+        return;
+    }
+
+    int iPivo = 0;
+    int esq = 0;
+    int dir = t-1;
+    
+    while(esq < dir){
+        while (esq < t-1 && ar[esq] <= ar[iPivo]){
+            esq++;
+        }
+        while(ar[dir] > ar[iPivo]){
+            dir--;
+        }
+        if (esq < dir){
+            Troca(&ar[esq], &ar[dir]);
+        }
+    }
+    Troca(&ar[iPivo], &ar[dir]);
+
+    QuickSort(ar, dir);
+    QuickSort(&ar[dir+1], t-dir-1);
+}
+
+void MergeSortAux(unsigned char ar[], unsigned char aux[], int t){
+    if (t <= 1){
+        return;
+    }
+
+    int meio = t/2;
+    MergeSortAux(ar, aux, meio);
+    MergeSortAux(&ar[meio], &aux[meio], t-meio);
+
+    int i = 0;
+    int j = meio;
+    int k = 0;
+
+    while(i < meio && j < t){
+        if (ar[i] <= ar[j]){
+            aux[k++] = ar[i++];
+        }else{
+            aux[k++] = ar[j++];
+        }
+    }
+
+    while(i < meio){
+        aux[k++] = ar[i++];
+    }
+    while(j < t){
+        aux[k++] = ar[j++];
+    }
+
+    for(int i = 0; i < t; i++){
+        ar[i] = aux[i];
+    }
+}
+
+void MergeSort(unsigned char ar[], int t){
+    unsigned char aux[t];
+
+    MergeSortAux(ar, aux, t);
+}
