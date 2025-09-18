@@ -115,3 +115,51 @@ void InsertionSort2(unsigned char ar[], int t){
         ar[j+1] = aux;
     }
 }
+
+void BubbleSort(unsigned char ar[], int t){
+    int i, trocou;
+
+    trocou = 1;
+    while(trocou){
+        trocou = 0;
+        for(i = 0; i < t-1; i++){
+            if (ar[i] > ar[i+1]){
+                Troca(&ar[i], &ar[i+1]);
+                trocou = 1;
+            }
+        }
+        t--;
+    }
+
+}
+
+void SelectionSort(unsigned char ar[], int t){
+    int i, j, iMenor;
+
+    for(i = 0; i < t-1; i++){
+        iMenor = i;
+        for(j = i+1; j < t; j++){
+            if (ar[j] < ar[iMenor]){
+                iMenor = j;
+            }
+        }
+        if (iMenor != i){
+            Troca(&ar[iMenor], &ar[i]);
+        }
+    }
+
+}
+
+void InsertionSort(unsigned char ar[], int t){
+    int aux, i, j;
+
+    for(i = 1; i < t; i++){
+        aux = ar[i];
+
+        for(j = i-1; j >=0 && ar[j] > aux; j--){
+            ar[j+1] = ar[j];
+        }
+
+        ar[j+1] = aux;
+    }
+}
