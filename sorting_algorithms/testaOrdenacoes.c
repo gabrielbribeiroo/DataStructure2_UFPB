@@ -59,3 +59,59 @@ void IniciaArrayInversamenteOrdenado(unsigned char ar[], int t){
         ar[i] = (t-i)*256 / t;
     }
 }
+
+void Troca(unsigned char *a, unsigned char *b){
+    unsigned char aux = *a;
+    *a = *b;
+    *b = aux;
+}
+
+void BubbleSort2(unsigned char ar[], int t){
+    int trocou;
+    int i, nElem = t - 1;
+
+    trocou = 1;
+    while(trocou){
+        trocou = 0;
+        for(i = 0; i < nElem; i++){
+            if (ar[i] > ar[i+1]){
+                int aux = ar[i];
+                ar[i] = ar[i+1];
+                ar[i+1] = aux;
+                trocou = 1;
+            }
+        }
+        nElem--;
+    }
+}
+
+void SelectionSort2(unsigned char ar[], int t){
+    int iMenor, i, j;
+
+    for(i = 0; i < t-1; i++){
+        iMenor = i;
+        for(j = i + 1; j < t; j++){
+            if (ar[j] < ar[iMenor]){
+                iMenor = j;
+            }
+        }
+
+        if (iMenor != i){
+            int aux = ar[i];
+            ar[i] = ar[iMenor];
+            ar[iMenor] = aux;
+        }
+    }
+}
+
+void InsertionSort2(unsigned char ar[], int t){
+    int i, j, aux;
+
+    for(i = 1; i < t; i++){
+        aux = ar[i];
+        for(j = i-1; j >= 0 && ar[j] > aux; j-- ){
+            ar[j+1] = ar[j];
+        }
+        ar[j+1] = aux;
+    }
+}
