@@ -379,3 +379,72 @@ void RadixSort(unsigned char ar[], int t){
     }
 
 }
+
+int main(){
+    tTesteOrdenacao algoritmos[] = {    
+                                //{"BubbleSort", BubbleSort, -1},
+                                //{"SelectionSort", SelectionSort, -1},
+                                //{"InsertionSort", InsertionSort, -1},
+                                //{"QuickSort", QuickSort, -1},
+                                {"MergeSort", MergeSort, -1},
+                                {"HeapSort", HeapSort, -1},
+                                {"CountingSort", CountingSort, -1},
+                                {"BucketSort", BucketSort, -1},
+                                {"RadixSort", RadixSort, -1}
+                            };
+    tFuncaoIniciaArray funcoesInicializacoes[] = {
+                                {"aleatoriamente", IniciaArrayAleatorio},
+                                {"ordenadamente", IniciaArrayOrdenado},
+                                {"inversamente ordenado", IniciaArrayInversamenteOrdenado}
+                            };
+    unsigned char tabela[TAMANHO_TABELA];
+    int i, j, k, n, qAlgoritmos, qTestesPorAlgoritmo;
+    int64_t tInicial, tFinal;
+    float fatorValores = 0.2;
+
+
+    //testar algoritmos e exibir resultados
+    qAlgoritmos = sizeof(algoritmos)/sizeof(algoritmos[0]);
+    qTestesPorAlgoritmo = sizeof(funcoesInicializacoes)/sizeof(funcoesInicializacoes[0]);
+    printf("Iniciando os testes de %d algoritmos de ordenação em %d tabela(s) com %d itens...\n", 
+                                                qAlgoritmos, qTestesPorAlgoritmo, TAMANHO_TABELA);
+
+    for (i = 0; i < qAlgoritmos; i++){
+        printf("\n------------------------------------------------------------\n");
+        printf("Algoritmo %d/%d, \"%s\":\n", i+1, qAlgoritmos, algoritmos[i].nomeAlgoritmo);
+        for(j = 0; j < qTestesPorAlgoritmo; j++){
+            printf("Iniciando teste %d/%d...\n", j+1, qTestesPorAlgoritmo);
+            printf("Iniciando a tabela %s...\n", funcoesInicializacoes[j].descricao);
+            funcoesInicializacoes[j].funcao(tabela, TAMANHO_TABELA);
+            printf("Executando o algoritmo...\n");
+            tInicial = currentTimeMillis();
+            algoritmos[i].funcao(tabela, TAMANHO_TABELA);
+            tFinal = currentTimeMillis();
+            algoritmos[i].tempoExecucao = tFinal - tInicial;
+            printf("Tempo de execucao: %.3lf\n", algoritmos[i].tempoExecucao / (double) 1000);
+            printf("Inicio e final da tabela ordenada: ");
+            n = TAMANHO_TABELA <= MAX_ELEMENTOS_EXIBIR ? TAMANHO_TABELA : MAX_ELEMENTOS_EXIBIR;
+            for(k = 0; k < n/2; k++){
+                int ant;
+                if (k > 0 && ant > tabela[k]){
+                    printf("!!!!! ");
+                }
+                printf("%d%c", tabela[k], ' ');
+                ant = tabela[k];
+            }
+            for(k = TAMANHO_TABELA - n/2; k < TAMANHO_TABELA; k++){
+                int ant;
+                if (k > TAMANHO_TABELA - n/2 && ant > tabela[k]){
+                    printf("!!!!! ");
+                }
+                printf("%d%c", tabela[k], k == TAMANHO_TABELA-1 ? '\n' : ' ');
+                ant = tabela[k];
+            }
+            
+
+        }
+    }
+
+
+    return 0;
+}
