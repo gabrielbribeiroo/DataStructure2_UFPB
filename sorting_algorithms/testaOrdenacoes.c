@@ -254,3 +254,16 @@ void OrdenaHeap(unsigned char ar[], int raiz, int t){
         }
     }  
 }
+
+void HeapSort(unsigned char ar[], int t){
+    int i;
+
+    for(i = (t-1-1)/2; i >= 0; i--){
+        OrdenaHeap(ar, i, t);
+    }
+
+    for (i = t-1; i > 0; i--){
+        Troca(&ar[0], &ar[i]);
+        OrdenaHeap(ar, 0, i);
+    }
+}
