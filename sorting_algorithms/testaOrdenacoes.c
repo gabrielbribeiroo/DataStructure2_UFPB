@@ -305,3 +305,38 @@ void CountingSort(unsigned char ar[], int t){
         ar[i] = ordenado[i];
     }
 }
+
+void BucketSort(unsigned char ar[], int t){
+    int maior, i;
+
+    //procurar maior valor
+    maior = ar[0];
+    for(i = 1; i < t; i++){
+        if (ar[i] > maior){
+            maior = ar[i];
+        }
+    }
+
+    int nColetores = t/maior+1, coletor;
+    unsigned char lista[nColetores][2 * t/nColetores];
+    int qColetor[nColetores];
+    memset(qColetor, 0, sizeof(int)*nColetores);
+
+    //distribuicao
+    int maxColetor1 = maior/nColetores + 1;
+    for(i = 0; i < t; i++){
+        coletor = ar[i] / maxColetor1;
+        lista[coletor][qColetor[coletor]] = ar[i];
+        qColetor[coletor]++;
+    }
+    
+    //ordenacao dos coletores
+    int j, k = 0; 
+    for(i = 0; i < nColetores; i++){
+        QuickSort(lista[i], qColetor[i]);
+        //coloca na tabela
+        for(j = 0; j < qColetor[i]; j++){
+            ar[k++] = lista[i][j];
+        }
+    }
+}
