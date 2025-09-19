@@ -228,3 +228,29 @@ void MergeSort(unsigned char ar[], int t){
 
     MergeSortAux(ar, aux, t);
 }
+
+void OrdenaHeap(unsigned char ar[], int raiz, int t){
+    int fEsq, fDir, maior;
+
+    maior = raiz;
+    while(1){
+        fEsq = 2*raiz + 1;
+        fDir = fEsq + 1;
+
+        if (fEsq >= t){
+            break;
+        }
+
+        maior = (ar[maior] >= ar[fEsq]) ? maior : fEsq;
+        if (fDir < t){
+            maior = (ar[maior] >= ar[fDir]) ? maior : fDir;
+        }
+
+        if (maior != raiz){
+            Troca(&ar[raiz], &ar[maior]);
+            raiz = maior;
+        }else{
+            break;
+        }
+    }  
+}
